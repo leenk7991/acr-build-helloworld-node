@@ -1,13 +1,14 @@
-const http = require('http')
+const http = require("http");
 
-const port = 80
+const port = 80;
 
 const server = http.createServer((request, response) => {
-  response.writeHead(200, {'Content-Type': 'text/plain'})
-  response.write('Hello World\n')
-  response.end('Version: ' + process.env.NODE_VERSION + '\n')
-})
+  response.writeHead(200, { "Content-Type": "text/plain" });
+  response.write("Hello World\n");
+  response.write("updated\n");
+  response.end("Version: " + process.env.NODE_VERSION + "\n");
+});
 
-server.listen(port)
+server.listen(port);
 
-console.log(`Server running at http://localhost: ${port}`)
+console.log(`Server running at http://localhost: ${port}`);
